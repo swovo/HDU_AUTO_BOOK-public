@@ -66,7 +66,7 @@ class SeatAutoBooker:
         seat_type = seat_config[user_config[the_day_after_tomorrow]['name']]["type"]
 
         start_time = datetime.now().replace(hour=19-time_zone, minute=50, second=0, microsecond=0)
-        end_time = datetime.now().replace(hour=20-time_zone, minute=20, second=0, microsecond=0)
+        end_time = datetime.now().replace(hour=20-time_zone, minute=30, second=0, microsecond=0)
 
         start_time = start_time - timedelta(minutes=self.cfg["cron-delta-minutes"])
         if datetime.now() < start_time or datetime.now() > end_time:
